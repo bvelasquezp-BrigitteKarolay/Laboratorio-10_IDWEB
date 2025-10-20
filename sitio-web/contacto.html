@@ -1,0 +1,75 @@
+<!--PAGINA: CONTACTO -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | SweetDelight</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Logo SweetDelight">
+      <h1>SweetDelight</h1>
+    </div>
+    <nav class="nav-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FORMULARIO -->
+  <main class="contenido">
+    <section class="contacto">
+      <h2>CONTACTANOS</h2>
+      <p>Queremos ser parte de tu celebracion. Completa el siguiente formulario:</p>
+
+      <form class="form-contacto" onsubmit="return confirmarEnvio()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" required>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" placeholder="+51 999 999 999">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+
+        <div class="terminos">
+          <input type="checkbox" id="acepto" required>
+          <label for="acepto">Acepto terminos y condiciones</label>
+        </div>
+
+        <button type="submit" class="boton">Enviar</button>
+      </form>
+
+      <p id="confirmacion" class="mensaje-confirmacion" hidden>Gracias por contactarte con nosotros, te responderemos pronto 💕</p>
+    </section>
+  </main>
+
+  <!-- PIE -->
+  <footer class="pie">
+    <p>© 2025 SweetDelight | Contacto directo</p>
+  </footer>
+
+  <script>
+    function confirmarEnvio() {
+      document.getElementById("confirmacion").hidden = false;
+      setTimeout(() => {
+        document.getElementById("confirmacion").hidden = true;
+      }, 3000);
+      return false;
+    }
+  </script>
+</body>
+</html>
