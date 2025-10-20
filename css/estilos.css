@@ -1,0 +1,100 @@
+/* LABORATORIO 10
+   AUTORA: BRIGITTE KAROLAY VELASQUEZ PUMA */
+
+/* VARIABLES DE COLOR */
+:root {
+  --rosado: #f9c5d1;
+  --rosado-fuerte: #e598b0;
+  --dorado: #d4af37;
+  --blanco: #fff;
+  --gris: #333;
+}
+
+/* RESETEO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ENCABEZADO */
+.encabezado {
+  background: linear-gradient(135deg, var(--rosado-fuerte), var(--rosado));
+  color: var(--blanco);
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* MENU */
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: var(--dorado);
+  padding: 10px 0;
+}
+
+.nav-principal ul li {
+  margin: 0 15px;
+}
+
+.nav-principal ul li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-principal ul li a:hover,
+.nav-principal ul li a.activo {
+  color: var(--rosado-fuerte);
+}
+
+/* BANNER */
+.banner {
+  background: url("https://images.unsplash.com/photo-1504754524776-8f4f37790ca0") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.boton {
+  background: var(--dorado);
+  color: var(--gris);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background: var(--rosado-fuerte);
+  color: white;
+}
+
